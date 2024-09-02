@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="banner">
+                <div class="banner-text">
+                    <h1>ToDo</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<form method="POST">
+    {% csrf_token %}
+    <div class="alert alert-danger">
+        <strong>Delete!</strong> Are you sure delete this task??
+      </div>
+      <button type="submit" class="btn btn-success">Confirm</button>
+
+</form>
+
+{% endblock %}
